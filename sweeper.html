@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mine Sweeper</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1260680_hq70i5r46a7.css">
+    <style>
+        .container{
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+            user-select: none;
+        }
+        .iconhongqi{
+            color: red !important;
+        }
+        .container>div.unclick{
+            border: solid 2px;
+            border-top-color: rgb(233, 233, 233);
+            border-left-color: rgb(233, 233, 233);
+            border-right-color: rgb(104, 104, 104);
+            border-bottom-color: rgb(104, 104, 104);
+            background-color: #e0dfdf !important; 
+            width: 30px;
+            height:30px;
+        }
+        .container>div{
+            background-color: rgb(228, 225, 225);
+            border: solid 1px rgb(233, 233, 233);
+            width: 32px;
+            height:32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: default;
+            font-weight: bold;
+            position: relative;
+        }        
+        .error:after{
+            content: '╳';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            font-size: 30px;
+            color: red;
+            opacity: 0.5;
+            line-height: 30px;
+            text-align: center;
+            width: 30px;
+        }
+        .n1{
+            color: blue;
+        }
+        .n2{
+            color:mediumaquamarine;
+        }
+        .n3,.n4{
+            color:darkorange;
+        }
+        .n5,.n6{
+            color:firebrick;            
+        }
+        .animate{
+            animation: animate .8s;
+        }
+
+        button{
+            margin-left: 10px;
+        }
+
+        @keyframes animate{
+            0% {
+                background: rgb(228, 225, 225);
+            }
+            25% {
+                background: lightgrey;
+            }
+            50% {
+                background: rgb(228, 225, 225);
+            }
+            75% {
+                background: lightgrey;
+            }
+            100%{
+                background: rgb(228, 225, 225);
+            }
+        }
+    </style>
+    <script src="sweeper.js"></script>
+</head>
+<body>
+    <div id="container" class="container">
+        
+    </div>
+</body>
+</html>
